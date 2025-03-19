@@ -18,4 +18,4 @@ $encryptedSecret = $rsa.Encrypt($secretBytes, [System.Security.Cryptography.RSAE
 
 # Afficher le secret chiffr�
 Write-Output "Secret chiffré: $encryptedSecret"
-$encryptedSecret > "D:\Scripts\ChiffrementSecret\password.txt"
+
