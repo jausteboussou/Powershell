@@ -11,12 +11,11 @@ $secret = "***"
 $secretBytes = [System.Text.Encoding]::UTF8.GetBytes($secret)
 
 # Chiffrer le secret avec le bon type de padding
-$rsaProvider = [System.Security.Cryptography.RSACryptoServiceProvider]::new()
-$rsaProvider.FromXmlString($cert.PublicKey.Key.ToXmlString($false))
-$encryptedBytes = $rsaProvider.Encrypt($secretBytes, [System.Security.Cryptography.RSAEncryptionPadding]::OaepSHA1)
+$rsa = [System.Security.Cryptography.RSA]::Create()
+$rsa.FromXmlString($cert.PublicKey.Key.ToXmlString($false))
+$encryptedSecret = $rsa.Encrypt($secretBytes, [System.Security.Cryptography.RSAEncryptionPadding]::OaepSHA256)
 
-# Convertir les bytes chiffr�s en une cha�ne Base64 pour l'affichage
-$encryptedSecret = [Convert]::ToBase64String($encryptedBytes)
 
 # Afficher le secret chiffr�
 Write-Output "Secret chiffré: $encryptedSecret"
+$encryptedSecret > "D:\Scripts\ChiffrementSecret\password.txt"
