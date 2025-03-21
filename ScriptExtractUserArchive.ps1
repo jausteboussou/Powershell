@@ -74,7 +74,7 @@ try
         importmodule
         
         # Changement de l'extension de .csv à .xlsx
-        $ExportPath = "D:\Scripts\HygieneO365\ExportAllUsers$($Today).xlsx"
+        $ExportPath = "D:\***\***\***$($Today).xlsx"
 
         # Récupération des données
         $ArchiveUsers = Get-AllArchiveUsers
