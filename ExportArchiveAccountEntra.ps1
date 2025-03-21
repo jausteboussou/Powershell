@@ -158,7 +158,7 @@ try
         importmodule # Import des modules
         
         # Définit le chemin du fichier Excel
-        $ExportPath = "D:\Scripts\HygieneO365\ExportAllUsers$($Today).xlsx"
+        $ExportPath = "D:\***\***5\***$($Today).xlsx"
 
         # Récupère les données des deux types d'utilisateurs
         $ArchiveUsers = Get-AllArchiveUsers
