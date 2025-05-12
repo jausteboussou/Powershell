@@ -50,7 +50,7 @@ function Remove-RegistryKeys {
         "HKLM:\SOFTWARE\fctlog"
     )
 
-    $fortiProductCode = "{6COA3C5E-7725-49D8-A016-B3ADCACF61C2}"
+    $fortiProductCode = "{***}"
     $registryKeysToRemove = @()
 
     # Recherche dans les chemins de base
